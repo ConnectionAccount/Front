@@ -1,0 +1,110 @@
+.calendarHeader {
+}
+
+.calendarBodyContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mantine-color-gray-4);
+  overflow: hidden;
+  border: solid var(--mantine-color-gray-3);
+  border-width: 1px 0;
+}
+
+.calendarHeaderDay {
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 1px;
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+  .calendarHeaderDayItem {
+    padding: rem(10) rem(16);
+    text-align: center;
+    background-color: white;
+  }
+
+}
+
+.calendarHeaderTime {
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 1px;
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+  box-shadow: var(--mantine-shadow-xs);
+  z-index: calc(var(--mantine-z-index-modal));
+
+  .calendarHeaderTimeItem {
+    padding: rem(5) rem(7);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    color:#868E96;
+    .calendarHeaderTimeItem2 {
+      text-align: center;
+      padding: rem(5) rem(7);
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      display: flex;
+      color:#000000;
+
+    }
+  }
+}
+
+.calendarBody {
+  flex: 1 1 auto;
+  .calendarBodyDays {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 1px;
+
+    .calendarBodyDay {
+      background-color: white;
+      position: relative;
+      padding: rem(10) rem(16);
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      &[data-status="prev"],
+      &[data-status="next"] {
+        color: light-dark(
+          var(--mantine-color-gray-4),
+          var(--mantine-color-dark-3)
+        );
+        cursor: not-allowed;
+        background-color: var(--mantine-color-gray-1);
+      }
+
+      .eventItem {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 rem(10);
+        &:hover {
+          background-color: var(--mantine-color-gray-1);
+        }
+      }
+    }
+  }
+}
+
+
+.timeHeader {
+  display: grid;
+  grid-template-columns:  repeat(24, minmax(0, 1fr));
+  gap: 1px;
+  border-bottom: 1px solid var(--mantine-color-gray-3);
+
+  .timebody {
+    display: grid;
+    grid-template-columns:  repeat(8, minmax(0, 1fr));
+    gap: 1px;
+  }
+}
+

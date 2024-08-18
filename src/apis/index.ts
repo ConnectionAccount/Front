@@ -1,0 +1,16 @@
+export * as otpApi from "./otp";
+export * as statApi from "./stat";
+export * as authApi from "./auth";
+export * as userApi from "./user";
+export * as roleApi from "./role";
+export * as roomApi from "./room";
+export * as mediaApi from "./media";
+export * as serviceApi from "./service";
+export * as patientApi from "./patient";
+export * as generalApi from "./general";
+export * as employeeApi from "./employee";
+export * as customerApi from "./customer";
+export * as timeTableApi from "./time-table";
+export * as departmentApi from "./department";
+export * as exportItemApi from "./export-item";
+export * as addEmployeeApi from "./add-employee";
